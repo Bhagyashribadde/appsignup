@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Newsletter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .newsletter-container {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .newsletter-header {
+            background: #ff7f50;
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .highlight {
+            padding: 20px;
+            background: #ffe5d9;
+        }
+
+        .news-image {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #cc3700;
+            transform: scale(1.1);
+        }
+
+        .features {
+            padding: 20px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .feature-item {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .newsletter-footer {
+            background: #ff7f50;
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        .newsletter-footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .social-icons span {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="newsletter-container">
+        <header class="newsletter-header">
+            <img src="newsimages/img1" alt="logo" class="logo">
+            <h3>Weekly Newsletter</h3>
+        </header>
+
+        <section class="highlight">
+            <img src="newsimages/img2" alt="News Image" class="news-image">
+            <h2>Don't miss out on our BIG news!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue nulla, mattis eget ante ac.</p>
+            <button class="cta-button">SIGNUP</button>
+        </section>
+
+        <section class="features">
+            <h3>NEW RELEASES</h3>
+            <h2>Checkout our amazing features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="icon">⏳</span>
+                    <h4>Timer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📏</span>
+                    <h4>Measure tool</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🎚️</span>
+                    <h4>Slider</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">👥</span>
+                    <h4>Users</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="newsletter-footer">
+            <button class="cta-button">SIGNUP</button>
+            <p>You received this email because you signed up on our website or made a purchase from us.</p>
+            <a href="#">Unsubscribe</a>
+            <div class="social-icons">
+                <span>📘</span>
+                <span>🐦</span>
+                <span>📸</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const ctaButtons = document.querySelectorAll(".cta-button");
+
+            ctaButtons.forEach(button => {
+                button.addEventListener("mouseover", () => {
+                    button.style.transform = "scale(1.1)";
+                });
+
+                button.addEventListener("mouseout", () => {
+                    button.style.transform = "scale(1)";
+                });
+
+                button.addEventListener("click", () => {
+                    alert("Redirecting to your account...");
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
